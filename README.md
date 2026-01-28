@@ -1,57 +1,84 @@
-# Econ Project Templates: Modern, Reproducible Research in Economics
+# Reproducible Econometric Analysis Pipeline Using Cross-Country Data
 
-![MIT license](https://img.shields.io/github/license/OpenSourceEconomics/econ-project-templates)
-[![Documentation Status](https://readthedocs.org/projects/econ-project-templates/badge/?version=stable)](https://econ-project-templates.readthedocs.io/en/stable/)
-[![image](https://github.com/OpenSourceEconomics/econ-project-templates/actions/workflows/main.yml/badge.svg)](https://github.com/OpenSourceEconomics/econ-project-templates/actions/workflows/main.yml)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/OpenSourceEconomics/econ-project-templates/main.svg)](https://results.pre-commit.ci/latest/github/OpenSourceEconomics/econ-project-templates/main)
+## Project Overview
 
-This project provides a "batteries-included" template for economists to produce fully
-reproducible research. It replaces fragile, manual workflows with a robust, automated
-pipeline.
+This project implements a **fully reproducible empirical analysis pipeline** for cross-country macroeconomic data, with a strong emphasis on **effective programming practices for applied economists**.
 
-## Why Reproducibility?
+The goal is not to propose a novel economic theory, but to demonstrate how standard econometric workflows can be engineered as **modular, maintainable, testable, and reproducible software systems**, in line with best practices taught in the course *Effective Programming Practices for Economists*.
 
-Reproducibility is about **your peace of mind**. It means knowing that if you find a
-mistake in your raw data three days before submission, you can re-run your entire
-project—tables, figures, and paper—with a single command. It means your future self (and
-your co-authors) can understand and run your code on a new machine without spending a
-week fighting dependency hell.
+The pipeline programmatically acquires data, validates and cleans it, constructs features, estimates econometric models, and produces publication-ready outputs — all in a deterministic and reproducible manner.
 
-## Quick Start (The "Magic" Moment)
+---
 
-Experience the reproducibility of this template in less than five minutes:
+## Data Source
 
-1. **Install [Pixi](https://pixi.sh/)** (our only prerequisite).
-1. **Clone this repository**.
-1. **Run and view the results**:
+The project uses **publicly available macroeconomic data** from the **World Bank Open Data API**.
 
-```bash
-# View the research paper in your browser
-pixi run view-paper
+Data are acquired programmatically (no manual downloads) to ensure reproducibility.
 
-# View the presentation slides
-pixi run view-pres
-```
+### Core Indicators
 
-These commands automatically handle environment setup, data cleaning, analysis, and
-launching the output servers.
+The analysis is based on the following World Bank indicators:
 
-## Documentation
+- **GDP per capita (constant USD)**
+- **Inflation (CPI, annual %)**
+- **Investment (% of GDP)**
+- **School enrollment, secondary (%)**
+- **Trade openness (% of GDP)**
 
-Full documentation is available at
-[econ-project-templates.readthedocs.io](https://econ-project-templates.readthedocs.io/).
+To avoid unnecessary panel-data complexity while retaining economic relevance, the analysis focuses on a **cross-section of countries for a fixed year**.
 
-## Contributing
+---
 
-We welcome suggestions on anything from improving the documentation to reporting bugs
-and requesting new features. Please open an
-[issue](https://github.com/OpenSourceEconomics/econ-project-templates/issues) in these
-cases.
+## Models and Analysis
 
-### Contributors
+The pipeline estimates the following econometric models:
 
-@hmgaudecker @timmens
+- **Ordinary Least Squares (OLS)**  
+  - Continuous outcome: log GDP per capita  
+  - Robust standard errors (HC-type)
 
-### Former Contributor and Creator of pytask
+- **Logit model**  
+  - Binary outcome indicating high-inflation episodes
 
-@tobiasraabe
+- **Probit model**  
+  - Same binary outcome as in the Logit specification
+
+Where appropriate, additional diagnostics and marginal effects are computed and reported.
+
+The emphasis is on **clean model wrappers, consistent interfaces, and reproducible estimation**, rather than on implementing estimators from scratch.
+
+---
+
+## Outputs
+
+Running the pipeline automatically produces:
+
+- Cleaned and processed analysis datasets
+- Summary statistics tables
+- Regression tables (OLS, Logit, Probit) in **LaTeX format**
+- Diagnostic and descriptive figures
+
+All outputs are written to disk in a structured directory layout to support reproducible research workflows.
+
+---
+
+## Reproducibility
+
+The project is fully reproducible:
+
+- All dependencies are managed via **Pixi**
+- The entire workflow can be executed via a small number of commands
+- No manual data preparation steps are required
+- Results are deterministic given the fixed configuration
+
+Detailed instructions for setting up the environment and running the pipeline will be provided in the repository.
+
+---
+
+## Expected Contribution
+
+This project demonstrates how **standard econometric analyses** commonly used in applied economics can be implemented as **robust, reproducible, and well-tested software systems**.
+
+It illustrates effective programming practices that are directly relevant for empirical economists, including workflow decomposition, testing strategies, reproducibility, and research-oriented code organization.
+
