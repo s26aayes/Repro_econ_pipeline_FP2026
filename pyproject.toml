@@ -21,10 +21,10 @@ classifiers = [
   "Programming Language :: Python :: 3 :: Only",
 ]
 authors = [
-  { name = "JANE DOE", email = "janedoe@example-university.com" },
+  { name = "Ayesha Ayesha", email = "janedoe@example-university.com" },
 ]
 maintainers = [
-  { name = "JANE DOE", email = "janedoe@example-university.com" },
+  { name = "Ayesha Ayesha", email = "janedoe@example-university.com" },
 ]
 
 [project.readme]

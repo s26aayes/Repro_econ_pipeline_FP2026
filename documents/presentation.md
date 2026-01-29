@@ -5,22 +5,22 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## EXAMPLE PROJECT
+  ## Reproducible Econometric Analysis Pipeline Using Cross-Country Data
   Academic presentation with Slidev
 drawings:
   persist: false
 transition: fade
-title: EXAMPLE PROJECT
+title: Reproducible Econometric Analysis Pipeline Using Cross-Country Data
 mdc: true
 defaults:
   layout: center
 ---
 
-# EXAMPLE PROJECT
+# Reproducible Econometric Analysis Pipeline Using Cross-Country Data
 
-JANE DOE
+Ayesha Ayesha
 
-EXAMPLE UNIVERSITY
+University of Bonn
 
 ---
 

@@ -78,10 +78,10 @@ Now, search for and replace the following placeholders in the entire codebase.
 
 | Placeholder                                                   | Replacement                                       |
 | ------------------------------------------------------------- | ------------------------------------------------- |
-| JANE DOE                                                      | Your full name                                    |
-| EXAMPLE PROJECT                                               | Your project's name                               |
-| EXAMPLE UNIVERSITY                                            | Your university's name                            |
-| DOE2024                                                       | Your project's citation identifier                |
+| Ayesha Ayesha                                                      | Your full name                                    |
+| Reproducible Econometric Analysis Pipeline Using Cross-Country Data                                               | Your project's name                               |
+| University of Bonn                                            | Your university's name                            |
+| EPP2025                                                       | Your project's citation identifier                |
 | https://github.com/OpenSourceEconomics/econ-project-templates | The GitHub repo URL corresponding to your project |
 
 ### Review and update project details

@@ -1,4 +1,4 @@
-# EXAMPLE PROJECT
+# Reproducible Econometric Analysis Pipeline Using Cross-Country Data
 
 +++ {"part": "abstract"}
 

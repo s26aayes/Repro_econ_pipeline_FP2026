@@ -1,6 +1,6 @@
-@Unpublished{DOE2024,
-    Title  = "EXAMPLE PROJECT",
-    Author = "JANE DOE",
+@Unpublished{EPP2025,
+    Title  = "Reproducible Econometric Analysis Pipeline Using Cross-Country Data",
+    Author = "Ayesha Ayesha",
     Year   = "2024",
     Url    = "https://github.com/opensourceeconomics/econ-project-templates",
 }

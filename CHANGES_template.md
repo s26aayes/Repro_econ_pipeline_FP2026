@@ -42,7 +42,7 @@ Display the correct version number in the rendered docs.
 
 ## v0.8.0 — July 2024
 
-Complete re-write of how to obtain templates, simplifying the example project, and
+Complete re-write of how to obtain templates, simplifying the Reproducible Econometric Analysis Pipeline Using Cross-Country Data, and
 aligning the data management part with that of the newest EPP iteration.
 
 - Remove cookiecutter (#149, `@timmens`, `@hmgaudecker`)
